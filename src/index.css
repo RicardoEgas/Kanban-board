@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.logo {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  width: 100px;
+  height: auto;
+  text-align: center;
+  border: 1px solid black;
+  color: darkslategray;
+  padding: 0.8% 0.5%;
+  box-sizing: border-box;
+  border-radius: 100px;
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  color: darkslategray;
+  list-style: none;
+}
+
+footer {
+  height: 90px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: darkslategray;
+  border: 1px solid black;
+  font-weight: 500;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* .card {
+  max-width: 25%;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: rgba(0 0 0 0.35) 0px 5px 15px;
+} */
+
+.meal-img {
+  width: 100%;
+}
+
+.like-meal {
+  float: right;
+}
+
+/* .likesBtn {
+  background-color: transparent;
+  border: none;
+  float: right;
+} */
+
+.likes {
+  margin-right: 0;
+}
+
+.comment-btn {
+  width: 60%;
+  height: 30px;
+  font-size: 25px;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reserve-btn {
+  width: 80%;
+  height: 30px;
+  font-size: 25px;
+  background-color: transparent;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+ul li {
+  list-style: none;
+  width: 30%;
+}
