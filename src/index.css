@@ -9,7 +9,6 @@ header {
   height: auto;
   display: flex;
   justify-content: center;
-  margin: 1% 5%;
 }
 
 nav {
@@ -57,15 +56,15 @@ footer {
   padding-left: 10px;
   display: flex;
   align-items: center;
-  }
-
-  .card {
-    max-width: 25%;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+/* .card {
+  max-width: 25%;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: rgba(0 0 0 0.35) 0px 5px 15px;
+} */
 
 .meal-img {
   width: 100%;
@@ -118,4 +117,4 @@ ul {
 ul li {
   list-style: none;
   width: 30%;
-} 
+}

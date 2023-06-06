@@ -1,5 +1,5 @@
 import './index.css';
-import renderRecipes from './module/displayFood.js';
+// import renderRecipes from './module/displayFood.js';
 
 fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=c')
   .then((response) => response.json())
@@ -10,6 +10,6 @@ fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=c')
       const mealCounter = document.getElementById('mealCounter');
       const num = Object.values(meals).length;
       mealCounter.innerHTML = `<p>Meals(${num})</p>`;
-      renderRecipes(meal);
+      console.log(meal);
     });
   });
