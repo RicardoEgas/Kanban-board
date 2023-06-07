@@ -3,19 +3,12 @@
   padding: 0;
 }
 
-header {
+nav {
   margin: 0 auto;
   width: 90%;
   height: auto;
   display: flex;
   justify-content: center;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  width: 90%;
 }
 
 .logo {
@@ -58,27 +51,18 @@ footer {
   align-items: center;
 }
 
-/* .card {
-  max-width: 25%;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  box-shadow: rgba(0 0 0 0.35) 0px 5px 15px;
-} */
-
-.meal-img {
-  width: 100%;
+.dogs-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+  margin: 0 auto;
 }
 
-.like-meal {
-  float: right;
+li .dogs-img {
+  width: 60%;
+  height: auto;
 }
-
-/* .likesBtn {
-  background-color: transparent;
-  border: none;
-  float: right;
-} */
 
 .likes {
   margin-right: 0;
