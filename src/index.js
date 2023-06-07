@@ -1,6 +1,7 @@
 import './index.css';
 
 const dogList = document.getElementById('dogs-list');
+const projectId = 'NXpRpTwwlkHX1mjqefPA';
 
 function displayDogs() {
   const li = document.createElement('li');
@@ -45,3 +46,12 @@ for (let i = 0; i < 6; i += 1) {
     dogs.insertAdjacentHTML('afterbegin', `<li><img class="dogs-img" src="${images[i]}"><img></li>`);
   });
 }
+
+const fetchId = async () => {
+  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/`);
+  const data = await response.json();
+  console.log(data);
+};
+
+fetchId();
+
