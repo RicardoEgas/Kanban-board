@@ -1,31 +1,6 @@
 import './index.css';
 
-const dogList = document.getElementById('dogs-list');
 const projectId = 'NXpRpTwwlkHX1mjqefPA';
-
-function displayDogs() {
-  const li = document.createElement('li');
-
-  li.classList.add('card');
-  const likes = document.createElement('span');
-  likes.innerHTML = `
-      <i class="fa fa-heart-o"></i>
-    `;
-  likes.classList.add('like-dog');
-
-  const commentBtn = document.createElement('button');
-  commentBtn.innerHTML = 'Comments';
-  commentBtn.type = 'submit';
-  commentBtn.classList.add('comment-btn');
-
-  const reservationsBtn = document.createElement('button');
-  reservationsBtn.innerHTML = 'Reservations';
-  reservationsBtn.type = 'submit';
-  reservationsBtn.classList.add('reserve-btn');
-
-  li.append(likes, commentBtn, reservationsBtn);
-  dogList.append(li);
-}
 
 const fetchDogs = async () => {
   try {
@@ -40,18 +15,15 @@ const fetchDogs = async () => {
 const images = [];
 const dogs = document.getElementById('dogs-list');
 for (let i = 0; i < 6; i += 1) {
-  displayDogs();
   fetchDogs().then((data) => {
     images.push(data);
-    dogs.insertAdjacentHTML('afterbegin', `<li><img class="dogs-img" src="${images[i]}"><img></li>`);
+    dogs.insertAdjacentHTML('beforeend', `<li>
+    <img class="dogs-img" src="${images[i]}"><img>
+    <h2>Dog ${i+1} <i class="fa fa-heart-o"></i></h2>
+    <button>Comments</button>
+    <button>Reservations</button>
+    </li>`);
   });
 }
 
-const fetchId = async () => {
-  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/`);
-  const data = await response.json();
-  console.log(data);
-};
-
-fetchId();
 
