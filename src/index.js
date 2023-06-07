@@ -1,5 +1,7 @@
 import './index.css';
 
+import reserveDog from './modules/reserve.js';
+
 const dogList = document.getElementById('dogs-list');
 const projectId = 'NXpRpTwwlkHX1mjqefPA';
 
@@ -55,3 +57,4 @@ const fetchId = async () => {
 
 fetchId();
 
+reserveDog();

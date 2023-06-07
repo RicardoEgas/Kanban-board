@@ -102,3 +102,23 @@ ul li {
   list-style: none;
   width: 30%;
 }
+
+/* reservation */
+
+.reserve-modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 5%;
+  bottom: 5%;
+  left: 10%;
+  right: 10%;
+  width: auto;
+  height: auto;
+  padding: 3% 5%;
+  border: 1px solid #000;
+  background-color: aqua;
+  scroll-behaviour: auto;
+  z-index: 99;
+}
