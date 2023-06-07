@@ -1,5 +1,7 @@
 import './index.css';
 
+import reserveDog from './modules/reserve.js'
+
 const projectId = 'NXpRpTwwlkHX1mjqefPA';
 
 const fetchDogs = async () => {
@@ -21,10 +23,15 @@ for (let i = 0; i < 6; i += 1) {
     <img class="dogs-img" src="${images[i]}"><img>
     <h2>Dog ${i+1} <i class="fa fa-heart-o"></i></h2>
     <button>Comments</button>
-    <button>Reservations</button>
+    <button id ="reserve-btn" class="reserve-btn">Reservations</button>
     </li>`);
+    reserveDog(images);
   });
+  
+
+
 }
 
 
-reserveDog();
+
+

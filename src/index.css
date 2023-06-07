@@ -80,17 +80,6 @@ li .dogs-img {
   justify-content: center;
 }
 
-.reserve-btn {
-  width: 80%;
-  height: 30px;
-  font-size: 25px;
-  background-color: transparent;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -105,20 +94,46 @@ ul li {
 
 /* reservation */
 
+.reserve-btn {
+  width: 80%;
+  height: 30px;
+  font-size: 25px;
+  background-color: transparent;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .reserve-modal {
   position: fixed;
-  display: flex;
+  display: none;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
+  gap: 5%;
   top: 5%;
   bottom: 5%;
-  left: 10%;
-  right: 10%;
+  left: 5%;
+  right: 5%;
   width: auto;
   height: auto;
-  padding: 3% 5%;
+  padding: 3%;
   border: 1px solid #000;
+  border-radius: 1%;
   background-color: aqua;
   scroll-behaviour: auto;
   z-index: 99;
+}
+
+.dog-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1%;
+}
+
+.reserveForm {
+  display: flex;
+  flex-direction: column;
+
 }
