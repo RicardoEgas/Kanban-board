@@ -16,7 +16,6 @@ resListContainer.className = 'reserve-list-container';
 // create reservation list item 
 export const resListContent = document.createElement('p');
 resListContent.className = 'reserve-list-content';
-resListContent.innerText = 'reservations here';
 resListContainer.appendChild(resListContent);
 
 // create username input

@@ -2,6 +2,9 @@ import './index.css';
 import {
   fetchLike, postLike,
 } from './modules/likes.js';
+import resPopupImg from './modules/displayItemDetails.js';
+import postReserveData from './modules/postReserve.js';
+import getReserveData from './modules/getReserve';
 
 const fetchDogs = async () => {
   try {
@@ -41,11 +44,12 @@ document.body.addEventListener('click', (e) => {
     /* eslint-disable max-len */
     const numLikes = Number(e.target.parentElement.nextElementSibling.textContent.match(/\d+/)[0]) + 1;
     e.target.parentElement.nextElementSibling.innerHTML = `${numLikes} Likes`;
-postReserveData()
-
-
 
 
     postLike(id);
   }
+
 });
+
+postReserveData();
+getReserveData();
