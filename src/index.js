@@ -14,6 +14,7 @@ const fetchDogs = async () => {
 };
 
 const images = [];
+let counter = 0;
 const getLikes = await fetchLike();
 const dogs = document.getElementById('dogs-list');
 for (let i = 0; i < 6; i += 1) {
@@ -28,7 +29,13 @@ for (let i = 0; i < 6; i += 1) {
     <button>Reservations</button>
     </li>`);
   });
+  counter += 1;
 }
+
+// Displaying Counting items;
+
+const dogsCounter = document.getElementById('dogsCounter');
+dogsCounter.insertAdjacentHTML('beforeend', `(${counter})`);
 
 // Event Listeners;
 
