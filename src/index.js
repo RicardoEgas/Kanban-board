@@ -2,7 +2,7 @@ import './index.css';
 import { fetchLike, postLike } from './modules/likes.js';
 import resPopupImg from './modules/displayItemDetails.js';
 import postReserveData from './modules/postReserve.js';
-import getReserveData from './modules/getReserve.js';
+// import getReserveData from './modules/getReserve.js';
 import fetchDogs from './modules/getDogItems.js';
 
 // fetch items from API
