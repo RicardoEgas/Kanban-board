@@ -9,6 +9,7 @@ import fetchDogs from './modules/getDogItems.js';
 fetchDogs();
 
 const images = [];
+let counter = 0;
 const getLikes = await fetchLike();
 const dogs = document.getElementById('dogs-list');
 for (let i = 0; i < 6; i += 1) {
@@ -25,7 +26,13 @@ for (let i = 0; i < 6; i += 1) {
     // show popup image
     resPopupImg(images);
   });
+  counter += 1;
 }
+
+// Displaying Counting items;
+
+const dogsCounter = document.getElementById('dogsCounter');
+dogsCounter.insertAdjacentHTML('beforeend', `(${counter})`);
 
 // Event Listeners;
 document.body.addEventListener('click', (e) => {
