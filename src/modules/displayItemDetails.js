@@ -1,5 +1,5 @@
 import * as resInterface from './reserveInterface.js';
-import postReserveData from './getReserve.js';
+import postReserveData from './postReserve.js';
 
 const resPopupImg = (theimgs) => {
   const imgIndex = Object.keys(theimgs);

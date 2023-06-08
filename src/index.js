@@ -51,4 +51,4 @@ document.body.addEventListener('click', (e) => {
 postReserveData();
 
 // show reservations
-getReserveData();
+// getReserveData();
