@@ -126,14 +126,13 @@ ul li {
   z-index: 99;
 }
 
-
 .dog-image {
   width: 70%;
   height: auto;
   border-radius: 1.5%;
 }
 
-h2.reserve-data {
+.reserve-data {
   font-family: "Roboto", sans-serif;
   color: #fff;
   font-size: 2rem;
@@ -152,7 +151,7 @@ h2.reserve-data {
 }
 
 .username, .startdate, .enddate {
-  width: 70%;
+  width: 60%;
   padding: 2%;
   border-radius: 1%;
   color: #000;

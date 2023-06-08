@@ -1,6 +1,7 @@
 import './index.css';
 
-import reserveDog from './modules/reserve.js'
+import resPopupImg from './modules/displayItemDetails.js';
+import postReserveData from './modules/postReserve.js';
 
 const projectId = 'NXpRpTwwlkHX1mjqefPA';
 
@@ -25,12 +26,11 @@ for (let i = 0; i < 6; i += 1) {
     <button>Comments</button>
     <button id ="reserve-btn" class="reserve-btn">Reservations</button>
     </li>`);
-    reserveDog(images);
+    resPopupImg(images);
   });
-  
-
-
 }
+
+postReserveData()
 
 
 
