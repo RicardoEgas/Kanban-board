@@ -1,4 +1,5 @@
 import * as resInterface from "./reserveInterface.js";
+import postReserveData from "./getReserve.js";
 
 const resPopupImg = (theimgs) => {
     const imgIndex = Object.keys(theimgs);
@@ -10,6 +11,7 @@ const resPopupImg = (theimgs) => {
             resInterface.reserveModal.style.display = 'flex';
           if (btnIndex === imgIndex) {
             resInterface.resItemImage.src = theimgs[btnIndex];
+            postReserveData(imgIndex);
           }
         })
       })

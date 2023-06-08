@@ -1,20 +1,12 @@
 import './index.css';
-import {
-  fetchLike, postLike,
-} from './modules/likes.js';
+import { fetchLike, postLike } from './modules/likes.js';
 import resPopupImg from './modules/displayItemDetails.js';
 import postReserveData from './modules/postReserve.js';
 import getReserveData from './modules/getReserve';
+import fetchDogs from './modules/getDogItems.js'
 
-const fetchDogs = async () => {
-  try {
-    const response = await fetch('https://dog.ceo/api/breed/akita/images/random');
-    const data = await response.json();
-    return data.message;
-  } catch (error) {
-    return 'something went wrong';
-  }
-};
+// fetch items from API
+fetchDogs();
 
 const images = [];
 const getLikes = await fetchLike();
@@ -30,12 +22,12 @@ for (let i = 0; i < 6; i += 1) {
     <button>Comments</button>
     <button id ="reserve-btn" class="reserve-btn">Reservations</button>
     </li>`);
+  // show popup image
     resPopupImg(images);
   });
 }
 
 // Event Listeners;
-
 document.body.addEventListener('click', (e) => {
   if (e.target.classList.contains('fa-heart-o')) {
     e.target.style.color = 'red';
@@ -44,12 +36,12 @@ document.body.addEventListener('click', (e) => {
     /* eslint-disable max-len */
     const numLikes = Number(e.target.parentElement.nextElementSibling.textContent.match(/\d+/)[0]) + 1;
     e.target.parentElement.nextElementSibling.innerHTML = `${numLikes} Likes`;
-
-
     postLike(id);
   }
-
 });
 
+// add a reservation
 postReserveData();
+
+// show reservations
 getReserveData();
