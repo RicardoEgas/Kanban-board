@@ -2,8 +2,8 @@ import './index.css';
 import { fetchLike, postLike } from './modules/likes.js';
 import resPopupImg from './modules/displayItemDetails.js';
 import postReserveData from './modules/postReserve.js';
-import getReserveData from './modules/getReserve';
-import fetchDogs from './modules/getDogItems.js'
+import getReserveData from './modules/getReserve.js';
+import fetchDogs from './modules/getDogItems.js';
 
 // fetch items from API
 fetchDogs();
@@ -22,7 +22,7 @@ for (let i = 0; i < 6; i += 1) {
     <button>Comments</button>
     <button id ="reserve-btn" class="reserve-btn">Reservations</button>
     </li>`);
-  // show popup image
+    // show popup image
     resPopupImg(images);
   });
 }

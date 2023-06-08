@@ -150,7 +150,9 @@ ul li {
   gap: 1.2rem;
 }
 
-.username, .startdate, .enddate {
+.username,
+.startdate,
+.enddate {
   width: 60%;
   padding: 2%;
   border-radius: 1%;

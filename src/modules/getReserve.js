@@ -1,10 +1,10 @@
-import * as resInterface from "./reserveInterface.js";
+// import * as resInterface from './reserveInterface.js';
 
-const projectId = 'HrIKPRrYjrxS00NlIVCD';
-const url ='https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations?item_id=item1/';
+// const projectId = 'HrIKPRrYjrxS00NlIVCD';
+// const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations?item_id=item1/';
 
-const getReserveData = async (imgId) => {
-console.log(imgId)
+// const getReserveData = async (imgId) => {
+//   console.log(imgId);
 //     let resultData;
 //   try {
 //   const response = await fetch(url);
@@ -15,6 +15,6 @@ console.log(imgId)
 //     console.log(error.message);
 //   }
 //  return resultData;
-}
+// };
 
-export default getReserveData;
+// export default getReserveData;

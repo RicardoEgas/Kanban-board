@@ -1,20 +1,20 @@
-// popup interface 
+// popup interface
 
-// create item image container 
-export const resItemImage = document.createElement('img')
+// create item image container
+export const resItemImage = document.createElement('img');
 resItemImage.className = 'dog-image';
 resItemImage.alt = 'image of the selected dog';
 
 // create reservation title
 export const resTitle = document.createElement('h2');
-resTitle.innerText = 'Reservations (data)'
+resTitle.innerText = 'Reservations (data)';
 resTitle.className = 'reserve-data';
 
-// create reservation list container 
+// create reservation list container
 export const resListContainer = document.createElement('div');
 resListContainer.className = 'reserve-list-container';
 
-// create reservation list item 
+// create reservation list item
 export const resListContent = document.createElement('p');
 resListContent.className = 'reserve-list-content';
 resListContainer.appendChild(resListContent);
@@ -68,7 +68,3 @@ reserveModal.appendChild(resItemImage);
 reserveModal.appendChild(resTitle);
 reserveModal.appendChild(resListContainer);
 reserveModal.appendChild(resForm);
-
-
-
-
