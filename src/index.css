@@ -80,6 +80,20 @@ li .dogs-img {
   justify-content: center;
 }
 
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+ul li {
+  list-style: none;
+  width: 30%;
+}
+
+/* reservation */
+
 .reserve-btn {
   width: 80%;
   height: 30px;
@@ -91,14 +105,70 @@ li .dogs-img {
   justify-content: center;
 }
 
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+.reserve-modal {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 5%;
+  top: 5%;
+  bottom: 5%;
+  left: 10%;
+  right: 10%;
+  width: auto;
+  height: auto;
+  padding: 3%;
+  border: 1px solid #6d95c7;
+  border-radius: 1%;
+  background-color: #6d95c7;
+  overflow-y: scroll;
+  z-index: 99;
 }
 
-ul li {
-  list-style: none;
+.dog-image {
+  width: 70%;
+  height: auto;
+  border-radius: 1.5%;
+}
+
+.reserve-data {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.reserve-form {
+  width: 70%;
+  margin: 2% auto;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1.2rem;
+}
+
+.username,
+.startdate,
+.enddate {
+  width: 60%;
+  padding: 2%;
+  border-radius: 1%;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.submit {
   width: 30%;
+  padding: 1%;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-size: 1.2rem;
+  box-shadow: 4px 6px 3px #000;
 }
