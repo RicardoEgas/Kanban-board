@@ -164,12 +164,26 @@ ul li {
   border-radius: 1.5%;
 }
 
-.reserve-data {
+.reserve-data-heading {
   font-family: "Roboto", sans-serif;
   color: #fff;
+  background: none;
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.5rem;
+}
+
+.reserve-list-container {
+  background: none;
+}
+
+.reserve-list-content {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  background: none;
 }
 
 .reserve-form {
@@ -180,7 +194,13 @@ ul li {
   flex-direction: column;
   justify-content: start;
   gap: 1.2rem;
+  background: none;
 }
+
+/* .blur-bg {
+  -webkit-filter: blur(7px);
+  filter: blur(7px);
+} */
 
 .username,
 .startdate,
@@ -193,6 +213,7 @@ ul li {
   font-size: 1.2rem;
   border: none;
   box-shadow: 1px 1px 3px #000;
+  background: #fff;
 }
 
 .submit {
