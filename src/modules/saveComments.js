@@ -1,6 +1,5 @@
 export const apiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 
-let appId;
 const saveComment = async (appId, itemId, username, comment) => {
   try {
     const response = await fetch(`${apiUrl}apps/${appId}/comments/`, {
@@ -14,35 +13,32 @@ const saveComment = async (appId, itemId, username, comment) => {
       throw new Error('Failed to save a comment');
     }
     const { result } = await response.json();
-    console.log('result', result);
     return result;
   } catch (error) {
     return null;
   }
 };
 
-const handleSaveComment = () => {
-  const commentData = getCommentData();
-  if (appId && commentData) {
-    const { itemId, username, comment } = commentData;
-    saveComment(appId, itemId, username, comment);
+// const handleSaveComment = (appId) => {
+//   const commentData = getCommentData();
+//   if (appId && commentData) {
+//     const { itemId, username, comment } = commentData;
+//     saveComment(appId, itemId, username, comment);
+//   }
+// };
+
+const initializeApp = async () => {
+  const response = await fetch(`${apiUrl}apps/`, {
+    method: 'POST',
+  });
+  if (!response.ok) {
+    throw new Error('Failed to initialize the app');
   }
+  // const data = await response.text();
+  // const appId = data.trim();
+  // handleSaveComment(appId);
 };
 
-export default saveComment;
-const initializeApp = async () => {
-  try {
-    const response = await fetch(`${apiUrl}apps/`, {
-      method: 'POST',
-    });
-    if (!response.ok) {
-      throw new Error('Failed to initialize the app');
-    }
-    const data = await response.text();
-    appId = data.trim();
-    handleSaveComment();
-  } catch (error) {
-    console.error(error);
-  }
-};
 initializeApp();
+
+export default saveComment;

@@ -55,7 +55,6 @@ export default async function openPopup(appId, dogImage, dogName) {
         `${apiUrl}apps/${appId}/comments/?item_id=${encodeURIComponent(itemId)}`,
       );
       const commentsData = await commentsResponse.json();
-      console.log(commentsData);
       // Update the comment list with the new comment
       const commentList = modal.querySelector('.comment-list');
       commentList.innerHTML = '';
