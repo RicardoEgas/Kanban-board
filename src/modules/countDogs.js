@@ -1,4 +1,5 @@
+/* eslint-disable import/prefer-default-export */
 export function countItems(images) {
-    let counter = images.length;
-    return counter;
-  }
+  const counter = images.length;
+  return counter;
+}

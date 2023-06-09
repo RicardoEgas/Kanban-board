@@ -4,13 +4,12 @@ import resPopupImg from './modules/displayItemDetails.js';
 import postReserveData from './modules/postReserve.js';
 // import getReserveData from './modules/getReserve.js';
 import fetchDogs from './modules/getDogItems.js';
-import { countItems } from './modules/countDogs';
+import { countItems } from './modules/countDogs.js';
 
 // fetch items from API
 fetchDogs();
 
 const images = [];
-let counter = 0;
 const getLikes = await fetchLike();
 const dogs = document.getElementById('dogs-list');
 for (let i = 0; i < 6; i += 1) {
@@ -27,16 +26,13 @@ for (let i = 0; i < 6; i += 1) {
     // show popup image
     resPopupImg(images);
   });
-  counter += 1;
 }
-// trigger counting function after 1 second
-  setTimeout(function(){
-    countItems(images); 
-  }, 1000);
-
-  // display Items counter 
+// display total items after 1 second
+setTimeout(() => {
+  countItems(images);
   const dogsCounter = document.getElementById('dogsCounter');
-  dogsCounter.insertAdjacentHTML('beforeend', `(${counter})`);
+  dogsCounter.insertAdjacentHTML('beforeend', `(${countItems(images)})`);
+}, 1000);
 
 // Event Listeners;
 document.body.addEventListener('click', (e) => {
