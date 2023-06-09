@@ -4,6 +4,7 @@
   "description": "<a name=\"readme-top\"></a>",
   "private": true,
   "main": "webpack.config.js",
+  "type": "module",
   "dependencies": {
     "abort-controller": "^3.0.0",
     "accepts": "^1.3.8",
