@@ -2,6 +2,8 @@ import './index.css';
 import {
   fetchLike, postLike,
 } from './modules/likes.js';
+import openPopup from './modules/popup.js';
+import { apiUrl } from './modules/saveComments.js';
 
 const fetchDogs = async () => {
   try {
@@ -14,7 +16,7 @@ const fetchDogs = async () => {
 };
 
 const images = [];
-let counter = 0;
+const counter = 0;
 const getLikes = await fetchLike();
 const dogs = document.getElementById('dogs-list');
 for (let i = 0; i < 6; i += 1) {
@@ -25,11 +27,41 @@ for (let i = 0; i < 6; i += 1) {
     <img class="dogs-img" src="${images[i]}"><img>
     <h2>Dog ${i + 1} <i class="fa fa-heart-o"></i></h2>
     <p id="like">${likes.length > 0 ? likes[0].likes : 0} likes</p>
-    <button>Comments</button>
+    <button class="commentsBtn">Comments</button>
     <button>Reservations</button>
     </li>`);
+
+    const commentButtons = document.getElementsByClassName('commentsBtn');
+    console.log(commentButtons);
+    const commentButton = commentButtons[commentButtons.length - 1];
+    // console.log('comm', commentButton);
+    commentButton.addEventListener('click', async () => {
+      const clickedDogIndex = i;
+      const dogImage = images[clickedDogIndex];
+      const dogName = `Dog ${clickedDogIndex + 1}`;
+      const initializeApp = async (callback) => {
+        try {
+          const response = await fetch(`${apiUrl}apps/`, {
+            method: 'POST',
+          });
+          if (!response.ok) {
+            throw new Error('Failed to initialize the app');
+          }
+          const data = await response.text();
+          const appId = data.trim();
+          if (callback) {
+            callback(appId);
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      const handleOpenPopup = (appId) => {
+        openPopup(appId, dogImage, dogName);
+      };
+      initializeApp(handleOpenPopup);
+    });
   });
-  counter += 1;
 }
 
 // Displaying Counting items;
