@@ -1,39 +1,44 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: #fdf4f5;
+}
+
+header {
+  margin: 2rem 0;
 }
 
 nav {
   margin: 0 auto;
-  width: 90%;
   height: auto;
   display: flex;
-  justify-content: center;
 }
 
 .logo {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
-  width: 100px;
-  height: auto;
-  text-align: center;
+  font-size: 10px;
+  width: 5rem;
+  height: 5rem;
   border: 1px solid black;
   color: darkslategray;
-  padding: 0.8% 0.5%;
+  padding-right: 0.5%;
   box-sizing: border-box;
   border-radius: 100px;
-  margin: 0 auto;
+  background-image: url('https://st3.depositphotos.com/3356953/32094/v/600/depositphotos_320946136-stock-illustration-stylish-akita-inu-dog-icon.jpg');
+  background-size: cover;
+  margin: 0 2rem;
 }
 
 .nav-list {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   width: 100%;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: darkslategray;
   list-style: none;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 footer {
@@ -44,7 +49,7 @@ footer {
   font-family: "Inter", sans-serif;
   font-size: 20px;
   color: darkslategray;
-  border: 1px solid black;
+  border-top: 1px solid black;
   font-weight: 500;
   padding-left: 10px;
   display: flex;
@@ -60,8 +65,10 @@ footer {
 }
 
 li .dogs-img {
-  width: 60%;
-  height: auto;
+  width: 80%;
+  height: 15rem;
+  border: 5px solid #454545;
+  border-radius: 20%;
 }
 
 .likes {
@@ -90,11 +97,14 @@ ul {
 ul li {
   list-style: none;
   width: 30%;
+  margin-bottom: 3rem;
 }
 
-/* reservation */
+.nav-list li {
+  margin: 0;
+}
 
-.reserve-btn {
+.dogs-items button {
   width: 80%;
   height: 30px;
   font-size: 25px;
@@ -103,7 +113,29 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 3px #888;
 }
+
+#like {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #cd1818;
+}
+
+.dogs-items i {
+  cursor: pointer;
+}
+
+.dogs-items button:hover {
+  color: white;
+  background-color: #6d95c7;
+}
+
+.dogs-items button:active {
+  background-color: #90aacb;
+}
+
+/* reservation */
 
 .reserve-modal {
   position: fixed;
