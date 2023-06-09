@@ -4,6 +4,7 @@ import resPopupImg from './modules/displayItemDetails.js';
 import postReserveData from './modules/postReserve.js';
 // import getReserveData from './modules/getReserve.js';
 import fetchDogs from './modules/getDogItems.js';
+import { countItems } from './modules/countDogs';
 
 // fetch items from API
 fetchDogs();
@@ -28,11 +29,14 @@ for (let i = 0; i < 6; i += 1) {
   });
   counter += 1;
 }
+// trigger counting function after 1 second
+  setTimeout(function(){
+    countItems(images); 
+  }, 1000);
 
-// Displaying Counting items;
-
-const dogsCounter = document.getElementById('dogsCounter');
-dogsCounter.insertAdjacentHTML('beforeend', `(${counter})`);
+  // display Items counter 
+  const dogsCounter = document.getElementById('dogsCounter');
+  dogsCounter.insertAdjacentHTML('beforeend', `(${counter})`);
 
 // Event Listeners;
 document.body.addEventListener('click', (e) => {
