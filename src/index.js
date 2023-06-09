@@ -40,7 +40,7 @@ document.body.addEventListener('click', (e) => {
   if (e.target.classList.contains('fa-heart-o')) {
     e.target.style.color = 'red';
 
-    const id = [].indexOf.call(e.target.parentNode.parentNode.parentNode.childNodes, 
+    const id = [].indexOf.call(e.target.parentNode.parentNode.parentNode.childNodes,
       e.target.parentNode.parentNode);
     const numLikes = Number(e.target.parentElement.nextElementSibling.textContent.match(/\d+/)[0]) + 1;
     e.target.parentElement.nextElementSibling.innerHTML = `${numLikes} Likes`;
