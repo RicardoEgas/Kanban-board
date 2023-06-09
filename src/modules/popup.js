@@ -46,39 +46,36 @@ export default async function openPopup(appId, dogImage, dogName) {
     const commentInput = document.getElementById('comment');
 
     const itemId = dogName.match(/\d+/)[0];
-    console.log(nameInput.value);
-      await saveComment(itemId, nameInput.value, commentInput.value);
-      nameInput.value = '';
-      commentInput.value = '';
-      // const commentsResponse = await fetch(
-      //   `${apiUrl}apps/${appId}/comments/?item_id=${encodeURIComponent(itemId)}`,
-      // );
-      // const commentsData = await commentsResponse.json();
-      // Update the comment list with the new comment
-      // const commentList = modal.querySelector('.comment-list');
-      // commentList.innerHTML = '';
-      // if (
-      //   commentsData
-      //   && commentsData.comments
-      //   && commentsData.comments.length > 0
-      // ) {
-      //   commentsData.comments.forEach((comment) => {
-      //     const listItem = document.createElement('li');
-      //     listItem.textContent = `${comment.username}: ${comment.comment}`;
-      //     commentList.appendChild(listItem);
-      //   });
-      // } else {
-      //   const noComments = document.createElement('li');
-      //   noComments.textContent = 'No comments yet.';
-      //   commentList.appendChild(noComments);
-      // }
-      // // Update the comment count
-      // const commentCount = modal.querySelector('.comment-count');
-      // commentCount.textContent = `Comments (${commentsData.comments.length})`;
-    
+    await saveComment(itemId, nameInput.value, commentInput.value);
+    nameInput.value = '';
+    commentInput.value = '';
+    // const commentsResponse = await fetch(
+    //   `${apiUrl}apps/${appId}/comments/?item_id=${encodeURIComponent(itemId)}`,
+    // );
+    // const commentsData = await commentsResponse.json();
+    // Update the comment list with the new comment
+    // const commentList = modal.querySelector('.comment-list');
+    // commentList.innerHTML = '';
+    // if (
+    //   commentsData
+    //   && commentsData.comments
+    //   && commentsData.comments.length > 0
+    // ) {
+    //   commentsData.comments.forEach((comment) => {
+    //     const listItem = document.createElement('li');
+    //     listItem.textContent = `${comment.username}: ${comment.comment}`;
+    //     commentList.appendChild(listItem);
+    //   });
+    // } else {
+    //   const noComments = document.createElement('li');
+    //   noComments.textContent = 'No comments yet.';
+    //   commentList.appendChild(noComments);
+    // }
+    // // Update the comment count
+    // const commentCount = modal.querySelector('.comment-count');
+    // commentCount.textContent = `Comments (${commentsData.comments.length})`;
   });
 
-  
   // Fetch comments from the Involvement API
   const itemId = dogName.match(/\d+/)[0];
   const userComment = await handleSaveComment(itemId);
