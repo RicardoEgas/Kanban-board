@@ -4,19 +4,24 @@ const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: './src/index.js',
+    index: path.resolve(__dirname, 'src/index.js'),
   },
   mode: 'development',
   devServer: {
-    static: './dist',
+    static: path.resolve(__dirname, 'dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      title: 'Dogs Rescue',
+      filename: 'index.html',
     }),
     new NodePolyfillPlugin(),
   ],
   output: {
+    clean: true,
+    publicPath: './',
+    assetModuleFilename: '[name][ext]',
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
