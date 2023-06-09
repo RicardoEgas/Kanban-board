@@ -9,12 +9,11 @@ const resPopupImg = async (theimgs) => {
     imgIndex.forEach((img, imgIndex) => {
       btn.addEventListener('click', () => {
         resInterface.reserveModal.className = 'reserve-modal';
-        "blur-bg"
         resInterface.reserveModal.style.display = 'flex';
         if (btnIndex === imgIndex) {
           resInterface.resItemImage.src = theimgs[btnIndex];
           postReserveData(btnIndex);
-          getReserveData(btnIndex)
+          getReserveData(btnIndex);
         }
       });
     });

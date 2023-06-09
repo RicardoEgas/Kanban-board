@@ -7,7 +7,7 @@ const showReservations = (resdata) => {
     resList.innerHTML = `
     ${resdata[resIndex].date_start} - ${resdata[resIndex].date_end} by ${resdata[resIndex].username}`;
     resInterface.resListContainer.appendChild(resList);
-});
+  });
 };
 
 export default showReservations;

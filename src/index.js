@@ -36,7 +36,7 @@ const container = async () => {
     const dogsCounter = document.getElementById('dogsCounter');
     dogsCounter.insertAdjacentHTML('beforeend', `(${countItems(images)})`);
   }, 1000);
-}
+};
 
 container();
 

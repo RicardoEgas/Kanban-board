@@ -4,13 +4,12 @@ import countReservations from './reserveCount.js';
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations?item_id=';
 
 const getReserveData = async (imgId) => {
-
   let resultData;
   try {
     const response = await fetch(`${url}${imgId}`);
     resultData = await response.json();
-    showReservations(resultData)
-    countReservations(resultData)
+    showReservations(resultData);
+    countReservations(resultData);
   } catch (error) {
     error.message = 'No reservations';
   }
