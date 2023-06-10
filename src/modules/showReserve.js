@@ -1,12 +1,14 @@
-import * as resInterface from './reserveInterface.js';
 
 const showReservations = (resdata) => {
-  const resList = document.createElement('p');
+  const resListContainer = document.querySelector('.reserve-list-container');
   resdata.forEach((res, resIndex) => {
-    resList.className = 'reserve-list-content';
-    resList.innerHTML = `
-    ${resdata[resIndex].date_start} - ${resdata[resIndex].date_end} by ${resdata[resIndex].username}`;
-    resInterface.resListContainer.appendChild(resList);
+    const resList = `
+    <p class="reserve-list-content">
+    ${resdata[resIndex].date_start} - ${resdata[resIndex].date_end} by ${resdata[resIndex].username}
+    </p> `;
+    resListContainer.insertAdjacentHTML('beforeend', resList);
+import * as resInterface from './reserveInterface.js';
+
   });
 };
 

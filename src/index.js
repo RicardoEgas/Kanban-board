@@ -5,23 +5,24 @@ import postReserveData from './modules/postReserve.js';
 import getReserveData from './modules/getReserve.js';
 import fetchDogs from './modules/getDogItems.js';
 import { countItems } from './modules/countDogs.js';
+import closeModalPopup from './modules/closePopup.js';
 
 // fetch items from API
-
 const container = async () => {
   fetchDogs();
   const images = [];
   const getLikes = await fetchLike();
   const dogs = document.getElementById('dogs-list');
   for (let i = 0; i < 6; i += 1) {
-    const itemId = `Dog${i + 1}`;
+    const itemId = `Dog ${i + 1}`;
     const likes = getLikes.filter((like) => like.item_id === i);
     fetchDogs().then((data) => {
       images.push(data);
       dogs.insertAdjacentHTML('beforeend', `<li class="dogs-items">
     <img class="dogs-img" src="${images[i]}"><img>
-    <h2> ${itemId} <i class="fa fa-heart-o"></i></h2>
+    <div class="title-like"><h2 class="itemid"> ${itemId} </h2><i class="fa fa-heart-o"></i>
     <p id="like">${likes.length > 0 ? likes[0].likes : 0} likes</p>
+    </div>
     <button>Comments</button>
     <button id ="reserve-btn" class="reserve-btn">Reservations</button>
     </li>`);
@@ -53,8 +54,17 @@ document.body.addEventListener('click', (e) => {
   }
 });
 
+// display items
+container();
+
 // add a reservation
 postReserveData();
 
 // show reservations
 getReserveData();
+
+// close modal
+closeModalPopup();
+
+// show itemId
+// showItemId();
