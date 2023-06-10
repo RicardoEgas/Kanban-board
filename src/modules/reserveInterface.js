@@ -7,17 +7,11 @@ resItemImage.alt = 'image of the selected dog';
 
 // create reservation title
 export const resTitle = document.createElement('h2');
-resTitle.innerText = 'Reservations (data)';
-resTitle.className = 'reserve-data';
+resTitle.className = 'reserve-data-heading';
 
 // create reservation list container
 export const resListContainer = document.createElement('div');
 resListContainer.className = 'reserve-list-container';
-
-// create reservation list item
-export const resListContent = document.createElement('p');
-resListContent.className = 'reserve-list-content';
-resListContainer.appendChild(resListContent);
 
 // create username input
 export const userInput = document.createElement('input');

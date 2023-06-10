@@ -1,7 +1,8 @@
 import * as resInterface from './reserveInterface.js';
 import postReserveData from './postReserve.js';
+import getReserveData from './getReserve.js';
 
-const resPopupImg = (theimgs) => {
+const resPopupImg = async (theimgs) => {
   const imgIndex = Object.keys(theimgs);
   const reserveBtn = document.querySelectorAll('.reserve-btn');
   reserveBtn.forEach((btn, btnIndex) => {
@@ -11,7 +12,8 @@ const resPopupImg = (theimgs) => {
         resInterface.reserveModal.style.display = 'flex';
         if (btnIndex === imgIndex) {
           resInterface.resItemImage.src = theimgs[btnIndex];
-          postReserveData(imgIndex);
+          postReserveData(btnIndex);
+          getReserveData(btnIndex);
         }
       });
     });
