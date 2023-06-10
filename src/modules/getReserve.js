@@ -1,20 +1,20 @@
-import showReservations from './showReserve.js';
-import countReservations from './reserveCount.js';
-import displayCounts from './displayCount.js';
+// import * as resInterface from './reserveInterface.js';
 
-const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations?item_id=';
+// const projectId = 'HrIKPRrYjrxS00NlIVCD';
+// const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations?item_id=item1/';
 
-const getReserveData = async (imgId) => {
-  let resultData;
-  try {
-    const response = await fetch(`${url}${imgId}`);
-    resultData = await response.json();
-    showReservations(resultData);
-    countReservations(resultData);
-    displayCounts(resultData);
-  } catch (error) {
-    error.message = 'No reservations';
-  }
-  return resultData;
-};
-export default getReserveData;
+// const getReserveData = async (imgId) => {
+//   console.log(imgId);
+//     let resultData;
+//   try {
+//   const response = await fetch(url);
+//   const result = await response.json();
+//     resultData = result;
+//       showList.innerText = "No reservations";
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+//  return resultData;
+// };
+
+// export default getReserveData;

@@ -4,10 +4,6 @@
   background-color: #fdf4f5;
 }
 
-a:link {
-  text-decoration: none;
-}
-
 header {
   margin: 2rem 0;
 }
@@ -24,6 +20,7 @@ nav {
   width: 5rem;
   height: 5rem;
   border: 1px solid black;
+  color: darkslategray;
   padding-right: 0.5%;
   box-sizing: border-box;
   border-radius: 100px;
@@ -36,7 +33,7 @@ nav {
   display: flex;
   align-items: center;
   width: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 20px;
   color: darkslategray;
   list-style: none;
@@ -49,7 +46,7 @@ footer {
   width: 100%;
   bottom: 0;
   left: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 20px;
   color: darkslategray;
   border-top: 1px solid black;
@@ -63,18 +60,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4%;
+  gap: 1%;
+  margin: 0 auto;
 }
 
 li .dogs-img {
-  width: 100%;
+  width: 80%;
   height: 15rem;
-  border: 2px solid #454545;
-  border-radius: 4%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  border: 5px solid #454545;
+  border-radius: 20%;
 }
 
 .likes {
@@ -91,20 +85,18 @@ li .dogs-img {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3%;
+  gap: 30px;
 }
 
 ul li {
   list-style: none;
-  width: 25%;
-  height: auto;
+  width: 30%;
   margin-bottom: 3rem;
 }
 
@@ -113,9 +105,9 @@ ul li {
 }
 
 .dogs-items button {
-  width: 100%;
+  width: 80%;
   height: 30px;
-  font-size: 1.2rem;
+  font-size: 25px;
   background-color: transparent;
   margin-top: 10px;
   display: flex;
@@ -123,11 +115,10 @@ ul li {
   justify-content: center;
   cursor: pointer;
   box-shadow: 5px 5px 3px #888;
-  text-align: center;
 }
 
 #like {
-  font-family: "Roboto", sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #cd1818;
 }
 
@@ -142,17 +133,6 @@ ul li {
 
 .dogs-items button:active {
   background-color: #90aacb;
-}
-
-.title-like {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-}
-
-.fa {
-  font-size: 1.5rem;
 }
 
 /* reservation */
@@ -178,64 +158,28 @@ ul li {
   z-index: 99;
 }
 
-.item-image {
+.dog-image {
   width: 70%;
   height: auto;
   border-radius: 1.5%;
 }
 
-.reserve-data-heading {
+.reserve-data {
   font-family: "Roboto", sans-serif;
   color: #fff;
-  background: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
-}
-
-.reserve-list-container {
-  background: none;
-  width: 40%;
-  height: auto;
-  border: 1px solid #fff;
-  padding: 4%;
-  box-shadow: 1px 1px 1px  4px #06486e;
-  text-align: center;
-  overflow-y: scroll;
-}
-
-.reserve-list-content {
-  margin: 0.5rem auto;
-  padding: 0.5rem auto;
-  font-family: "Roboto", sans-serif;
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 400;
-  background: none;
-}
-
-.reserve-form-title {
-  font-family: "Roboto", sans-serif;
-  color: #fff;
-  background: none;
-  font-size: 1.3rem;
-  font-weight: 400;
-  margin: 3% auto 0 auto;
+  line-height: 2.5rem;
 }
 
 .reserve-form {
   width: 70%;
-  margin: 0 auto;
-  padding: 1% 3%;
+  margin: 2% auto;
+  padding: 3%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   gap: 1.2rem;
-  background: none;
-}
-
-.blur-bg {
-  -webkit-filter: blur(7px);
-  filter: blur(7px);
 }
 
 .username,
@@ -246,10 +190,9 @@ ul li {
   border-radius: 1%;
   color: #000;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border: none;
   box-shadow: 1px 1px 3px #000;
-  background: #fff;
 }
 
 .submit {
@@ -258,19 +201,6 @@ ul li {
   background: #fff;
   font-family: "Roboto", sans-serif;
   color: #000;
-  font-size: 1rem;
+  font-size: 1.2rem;
   box-shadow: 4px 6px 3px #000;
-}
-
-.close-btn-container {
-  align-self: end;
-  width: 5%;
-  height: 5%;
-  background: none;
-}
-
-.close-btn {
-  background: none;
-  font-size: 3rem;
-  color: #fff;
 }
