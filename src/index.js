@@ -5,6 +5,10 @@ import { fetchLike, postLike } from './modules/likes.js';
 import postReserveData from './modules/postReserve.js';
 import fetchDogs from './modules/getDogItems.js';
 import { countItems } from './modules/countDogs.js';
+import closeModalPopup from './modules/closePopup.js';
+import getReserveData from './modules/getReserve.js';
+import resPopupImg from './modules/displayItemDetails.js';
+
 
 // fetch items from API
 fetchDogs();
