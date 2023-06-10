@@ -33,20 +33,16 @@ for (let i = 0; i < 6; i += 1) {
       const dogImage = images[clickedDogIndex];
       const dogName = `Dog ${clickedDogIndex + 1}`;
       const initializeApp = async (callback) => {
-        try {
-          const response = await fetch(`${apiUrl}apps/`, {
-            method: 'POST',
-          });
-          if (!response.ok) {
-            throw new Error('Failed to initialize the app');
-          }
-          const data = await response.text();
-          const appId = data.trim();
-          if (callback) {
-            callback(appId);
-          }
-        } catch (error) {
-          console.error(error);
+        const response = await fetch(`${apiUrl}apps/`, {
+          method: 'POST',
+        });
+        if (!response.ok) {
+          throw new Error('Failed to initialize the app');
+        }
+        const data = await response.text();
+        const appId = data.trim();
+        if (callback) {
+          callback(appId);
         }
       };
       const handleOpenPopup = (appId) => {
