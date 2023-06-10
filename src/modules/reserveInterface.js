@@ -1,4 +1,3 @@
-
 // create item image container
 export const resItemImage = document.createElement('img');
 resItemImage.className = 'dog-image';
@@ -22,7 +21,6 @@ resListContainer.className = 'reserve-list-container';
 export const resFormInstruction = document.createElement('h3');
 resFormInstruction.className = 'reserve-form-title';
 resFormInstruction.innerText = 'Add a reservation';
-
 
 // create username input
 export const userInput = document.createElement('input');
