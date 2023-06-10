@@ -31,7 +31,7 @@
 
 # About Project
 
-Kanban-board is the capstone project for module 2. 
+Kanban-board is the capstone project for module 2. We used an external API that returns arandom picture from a specific dog breed. In this project, we chose the Akita breed and followed all Microverse requirements with the Involvement API, counters and Jest tests.
 
 ## Built With
 
@@ -50,7 +50,8 @@ Kanban-board is the capstone project for module 2.
 
 - **[Webpack]**
 - **[ES6]**
-- **[API]
+- **[API]**
+- **[Jest]**
 
 
 
@@ -74,7 +75,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 ```sh
   cd my-folder
-  git clone https://github.com/RicardoEgas/Leaderboard.git
+  git clone https://github.com/RicardoEgas/Kanban-board.git
 ```
 
 
@@ -115,6 +116,12 @@ GitHub Pages
 - GitHub: [@githubhandle](https://github.com/RicardoEgas)
 - Twitter: [@twitterhandle](https://twitter.com/RjEgas)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ricardo-egas-952125136)
+
+👤 **Omet**
+
+- GitHub: [@githubhandle](https://github.com/ometman)
+- Twitter: [@twitterhandle](https://twitter.com/ometman)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ometman)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
