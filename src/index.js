@@ -60,7 +60,7 @@ setTimeout(() => {
   countItems(images);
   const dogsCounter = document.getElementById('dogsCounter');
   dogsCounter.insertAdjacentHTML('beforeend', `(${countItems(images)})`);
-}, 1000);
+}, 3000);
 
 // Event Listeners;
 document.body.addEventListener('click', (e) => {
