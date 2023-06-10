@@ -17,5 +17,3 @@ const resPopupImg = (theimgs) => {
     });
   });
 };
-
-export default resPopupImg;
