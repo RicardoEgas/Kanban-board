@@ -123,12 +123,6 @@ GitHub Pages
 - Twitter: [@twitterhandle](https://twitter.com/ometman)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ometman)
 
-👤 **Bhekisile Jozi**
-
-- GitHub: [@githubhandle](https://github.com/RicardoEgas)
-- Twitter: [@twitterhandle](https://github.com/Bhekisile)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bhekisile-jozi-b9823369)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
