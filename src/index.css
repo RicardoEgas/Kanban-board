@@ -1,11 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
+  overflow-x: hidden;
   background-color: #fdf4f5;
-}
-
-header {
-  margin: 2rem 0;
 }
 
 nav {
@@ -15,7 +13,7 @@ nav {
 }
 
 .logo {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 10px;
   width: 5rem;
   height: 5rem;
@@ -33,7 +31,7 @@ nav {
   display: flex;
   align-items: center;
   width: 100%;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 20px;
   color: darkslategray;
   list-style: none;
@@ -46,7 +44,7 @@ footer {
   width: 100%;
   bottom: 0;
   left: 0;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 20px;
   color: darkslategray;
   border-top: 1px solid black;
@@ -82,6 +80,17 @@ li .dogs-img {
   background-color: transparent;
   margin-top: 10px;
   margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reserve-btn {
+  width: 80%;
+  height: 30px;
+  font-size: 25px;
+  background-color: transparent;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,7 +174,7 @@ ul li {
 }
 
 .reserve-data {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #fff;
   font-size: 2rem;
   font-weight: 400;
@@ -189,7 +198,7 @@ ul li {
   padding: 2%;
   border-radius: 1%;
   color: #000;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   border: none;
   box-shadow: 1px 1px 3px #000;
@@ -199,8 +208,113 @@ ul li {
   width: 30%;
   padding: 1%;
   background: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #000;
   font-size: 1.2rem;
   box-shadow: 4px 6px 3px #000;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
+}
+
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 600px;
+  height: 90%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+}
+
+body.popup-active {
+  overflow: hidden;
+}
+
+body.popup-active .popup-overlay {
+  display: block;
+}
+
+.popup-container .closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  color: #999;
+  cursor: pointer;
+}
+
+.popup-container input[type='text'],
+.popup-container textarea {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popup-container .form-btn {
+  padding: 10px 20px;
+  background-color: #3eb6c1;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-container .form-btn:hover {
+  background-color: #3a888f;
+}
+
+.popup-container .pop-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.popup-container .comments,
+.popup-container .add-comm {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.popup-container .comment-list {
+  margin-bottom: 10px;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.comment-count {
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 1rem 0 2rem;
+}
+
+.comment-list li {
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
 }
