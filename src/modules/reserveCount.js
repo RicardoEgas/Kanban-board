@@ -1,8 +1,13 @@
-import * as resInterface from './reserveInterface.js';
 
 const countReservations = (resdata) => {
-  const resHeading = resInterface.resTitle;
-  resHeading.innerText = `Reservations (${resdata.length})`;
+  let result;
+  const len = resdata.length;
+  if (len === 0) {
+    result = 'Reservations (no reservations)';
+  } else if (len > 0) {
+    result = `Reservation (${len})`;
+  }
+  return result;
 };
 
 export default countReservations;
