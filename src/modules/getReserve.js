@@ -2,6 +2,7 @@ import showReservations from './showReserve.js';
 import countReservations from './reserveCount.js';
 import displayCounts from './displayCount.js'
 
+
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations?item_id=';
 
 const getReserveData = async (imgId) => {
@@ -16,6 +17,9 @@ const getReserveData = async (imgId) => {
     error.message = 'No reservations';
   }
   return resultData;
+  } catch (error) {
+    error.message = 'No reservations';
+  }
 };
 
 export default getReserveData;

@@ -39,6 +39,8 @@ const container = async () => {
   }, 1000);
 };
 
+container();
+
 // Event Listeners;
 document.body.addEventListener('click', (e) => {
   if (e.target.classList.contains('fa-heart-o')) {
