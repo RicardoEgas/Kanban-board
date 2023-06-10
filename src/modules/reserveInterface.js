@@ -1,4 +1,3 @@
-
 // create item image container
 export const resItemImage = document.createElement('img');
 resItemImage.className = 'dog-image';

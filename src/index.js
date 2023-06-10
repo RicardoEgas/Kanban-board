@@ -36,7 +36,7 @@ const container = async () => {
     countItems(images);
     const dogsCounter = document.getElementById('dogsCounter');
     dogsCounter.insertAdjacentHTML('beforeend', `(${countItems(images)})`);
-  }, 1000);
+  }, 2000);
 };
 
 // Event Listeners;
@@ -63,6 +63,3 @@ getReserveData();
 
 // close modal
 closeModalPopup();
-
-// show itemId
-// showItemId();
