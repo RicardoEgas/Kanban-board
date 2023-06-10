@@ -1,4 +1,3 @@
-
 const countReservations = (resdata) => {
   let result;
   const len = resdata.length;
