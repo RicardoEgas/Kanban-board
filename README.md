@@ -97,6 +97,7 @@ To run tests, run the following command:
 - npx eslint .
 - npx hint .
 - npx stylelint "**/*.{css,scss}"
+- npm test
 
 
 ### Deployment
@@ -117,12 +118,16 @@ GitHub Pages
 - Twitter: [@twitterhandle](https://twitter.com/RjEgas)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ricardo-egas-952125136)
 
-👤 **Omet**
+👤 **Omet Omeni**
 
 - GitHub: [@githubhandle](https://github.com/ometman)
 - Twitter: [@twitterhandle](https://twitter.com/ometman)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ometman)
 
+👤 **Bhekisile Jozi**
+
+- GitHub: [@githubhandle](https://github.com/Bhekisile)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bhekisile-j-b9823369/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
